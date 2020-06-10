@@ -1,0 +1,33 @@
+{
+  "sgaContratosApp": {
+    "proposta": {
+      "home": {
+        "title": "Propostas",
+        "createLabel": "Criar novo Proposta",
+        "createOrEditLabel": "Criar ou editar Proposta",
+        "notFound": "Nenhum Proposta encontrado"
+      },
+      "created": "Um novo Proposta foi criado com o identificador {{ param }}",
+      "updated": "Um Proposta foi atualizado com o identificador {{ param }}",
+      "deleted": "Um Proposta foi excluído com o identificador {{ param }}",
+      "delete": {
+        "question": "Tem certeza de que deseja excluir Proposta {{ id }}?"
+      },
+      "detail": {
+        "title": "Proposta"
+      },
+      "tipo": "Tipo",
+      "dataInicio": "Data Inicio",
+      "dataFim": "Data Fim",
+      "referencia": "Referencia",
+      "descricaoContrato": "Descricao Contrato",
+      "descricaoProposta": "Descricao Proposta",
+      "valorInicial": "Valor Inicial",
+      "evento": "Evento",
+      "negociacoes": "Negociacoes",
+      "unidadeComercial": "Unidade Comercial",
+      "cliente": "Cliente",
+      "areaCliente": "Area Cliente"
+    }
+  }
+}

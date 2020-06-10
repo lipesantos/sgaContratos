@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.9.xsd
+                        http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd">
+
+        <property name="autoIncrement" value="true"/>
+
+    <!--
+        Added the entity Proposta.
+    -->
+    <changeSet id="20200610055112-1" author="jhipster">
+        <createTable tableName="proposta">
+            <column name="id" type="bigint" autoIncrement="${autoIncrement}">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+            <column name="tipo" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="data_inicio" type="datetime">
+                <constraints nullable="true" />
+            </column>
+            <column name="data_fim" type="datetime">
+                <constraints nullable="true" />
+            </column>
+            <column name="referencia" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="descricao_contrato" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="descricao_proposta" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="valor_inicial" type="decimal(21,2)">
+                <constraints nullable="true" />
+            </column>
+            <column name="unidade_comercial_id" type="bigint">
+                <constraints nullable="true" />
+            </column>
+            <column name="cliente_id" type="bigint">
+                <constraints nullable="true" />
+            </column>
+            <column name="area_cliente_id" type="bigint">
+                <constraints nullable="true" />
+            </column>
+            <!-- jhipster-needle-liquibase-add-column - JHipster will add columns here -->
+        </createTable>
+        <dropDefaultValue tableName="proposta" columnName="data_inicio" columnDataType="datetime"/>
+        <dropDefaultValue tableName="proposta" columnName="data_fim" columnDataType="datetime"/>
+    </changeSet>
+
+    <changeSet id="20200610055112-1-relations" author="jhipster">
+
+        <createTable tableName="proposta_negociacoes">
+            <column name="negociacoes_id" type="bigint">
+                <constraints nullable="false"/>
+            </column>
+            <column name="proposta_id" type="bigint">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+
+        <addPrimaryKey columnNames="proposta_id, negociacoes_id" tableName="proposta_negociacoes"/>
+        
+    </changeSet>
+    <!-- jhipster-needle-liquibase-add-changeset - JHipster will add changesets here -->
+
+    <!--
+        Load sample data generated with Faker.js
+        - This data can be easily edited using a CSV editor (or even MS Excel) and
+          is located in the 'src/main/resources/config/liquibase/fake-data' directory
+        - By default this data is applied when running with the JHipster 'dev' profile.
+          This can be customized by adding or removing 'faker' in the 'spring.liquibase.contexts'
+          Spring Boot configuration key.
+    -->
+    <changeSet id="20200610055112-1-data" author="jhipster" context="faker">
+        <loadData
+                  file="config/liquibase/fake-data/proposta.csv"
+                  separator=";"
+                  tableName="proposta">
+            <column name="id" type="numeric"/>
+            <column name="tipo" type="string"/>
+            <column name="data_inicio" type="datetime"/>
+            <column name="data_fim" type="datetime"/>
+            <column name="referencia" type="string"/>
+            <column name="descricao_contrato" type="string"/>
+            <column name="descricao_proposta" type="string"/>
+            <column name="valor_inicial" type="numeric"/>
+            <!-- jhipster-needle-liquibase-add-loadcolumn - JHipster (and/or extensions) can add load columns here -->
+        </loadData>
+    </changeSet>
+
+</databaseChangeLog>

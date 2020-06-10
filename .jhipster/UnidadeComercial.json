@@ -1,0 +1,32 @@
+{
+  "name": "UnidadeComercial",
+  "fields": [
+    {
+      "fieldName": "cnpj",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "razaoSocial",
+      "fieldType": "String"
+    }
+  ],
+  "relationships": [
+    {
+      "relationshipType": "one-to-many",
+      "otherEntityName": "proposta",
+      "otherEntityRelationshipName": "unidadeComercial",
+      "relationshipName": "proposta"
+    }
+  ],
+  "changelogDate": "20200610054812",
+  "entityTableName": "unidade_comercial",
+  "dto": "no",
+  "pagination": "no",
+  "service": "no",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "clientRootFolder": "",
+  "applications": "*"
+}

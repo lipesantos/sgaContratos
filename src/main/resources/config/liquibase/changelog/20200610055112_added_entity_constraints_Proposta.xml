@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.9.xsd">
+    <!--
+        Added the constraints for entity Proposta.
+    -->
+    <changeSet id="20200610055112-2" author="jhipster">
+        
+        <addForeignKeyConstraint baseColumnNames="proposta_id"
+                                 baseTableName="proposta_negociacoes"
+                                 constraintName="fk_proposta_negociacoes_proposta_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="proposta"/>
+
+        <addForeignKeyConstraint baseColumnNames="negociacoes_id"
+                                 baseTableName="proposta_negociacoes"
+                                 constraintName="fk_proposta_negociacoes_negociacoes_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="negociacao"/>
+        
+        <addForeignKeyConstraint baseColumnNames="unidade_comercial_id"
+                                 baseTableName="proposta"
+                                 constraintName="fk_proposta_unidade_comercial_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="unidade_comercial"/>
+
+        <addForeignKeyConstraint baseColumnNames="cliente_id"
+                                 baseTableName="proposta"
+                                 constraintName="fk_proposta_cliente_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="cliente"/>
+
+        <addForeignKeyConstraint baseColumnNames="area_cliente_id"
+                                 baseTableName="proposta"
+                                 constraintName="fk_proposta_area_cliente_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="area_cliente"/>
+
+    </changeSet>
+</databaseChangeLog>

@@ -1,0 +1,38 @@
+{
+  "name": "AreaCliente",
+  "fields": [
+    {
+      "fieldName": "nome",
+      "fieldType": "String",
+      "fieldValidateRules": [
+        "required"
+      ]
+    }
+  ],
+  "relationships": [
+    {
+      "relationshipType": "one-to-many",
+      "otherEntityName": "proposta",
+      "otherEntityRelationshipName": "areaCliente",
+      "relationshipName": "proposta"
+    },
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "cliente",
+      "otherEntityRelationshipName": "areaCliente",
+      "relationshipName": "cliente",
+      "otherEntityField": "id"
+    }
+  ],
+  "changelogDate": "20200610055012",
+  "entityTableName": "area_cliente",
+  "dto": "no",
+  "pagination": "no",
+  "service": "no",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "clientRootFolder": "",
+  "applications": "*"
+}

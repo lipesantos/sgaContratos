@@ -1,0 +1,24 @@
+{
+  "sgaContratosApp": {
+    "unidadeComercial": {
+      "home": {
+        "title": "Unidade Comercials",
+        "createLabel": "Criar novo Unidade Comercial",
+        "createOrEditLabel": "Criar ou editar Unidade Comercial",
+        "notFound": "Nenhum Unidade Comercial encontrado"
+      },
+      "created": "Um novo Unidade Comercial foi criado com o identificador {{ param }}",
+      "updated": "Um Unidade Comercial foi atualizado com o identificador {{ param }}",
+      "deleted": "Um Unidade Comercial foi excluído com o identificador {{ param }}",
+      "delete": {
+        "question": "Tem certeza de que deseja excluir Unidade Comercial {{ id }}?"
+      },
+      "detail": {
+        "title": "Unidade Comercial"
+      },
+      "cnpj": "Cnpj",
+      "razaoSocial": "Razao Social",
+      "proposta": "Proposta"
+    }
+  }
+}

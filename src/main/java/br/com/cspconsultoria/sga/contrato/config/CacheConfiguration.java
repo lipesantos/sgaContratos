@@ -49,6 +49,20 @@ public class CacheConfiguration {
             createCache(cm, br.com.cspconsultoria.sga.contrato.domain.User.class.getName() + ".authorities");
             createCache(cm, br.com.cspconsultoria.sga.contrato.domain.PersistentToken.class.getName());
             createCache(cm, br.com.cspconsultoria.sga.contrato.domain.User.class.getName() + ".persistentTokens");
+            createCache(cm, br.com.cspconsultoria.sga.contrato.domain.UnidadeComercial.class.getName());
+            createCache(cm, br.com.cspconsultoria.sga.contrato.domain.UnidadeComercial.class.getName() + ".propostas");
+            createCache(cm, br.com.cspconsultoria.sga.contrato.domain.Cliente.class.getName());
+            createCache(cm, br.com.cspconsultoria.sga.contrato.domain.Cliente.class.getName() + ".areaClientes");
+            createCache(cm, br.com.cspconsultoria.sga.contrato.domain.Cliente.class.getName() + ".propostas");
+            createCache(cm, br.com.cspconsultoria.sga.contrato.domain.Cliente.class.getName() + ".negociacaos");
+            createCache(cm, br.com.cspconsultoria.sga.contrato.domain.AreaCliente.class.getName());
+            createCache(cm, br.com.cspconsultoria.sga.contrato.domain.AreaCliente.class.getName() + ".propostas");
+            createCache(cm, br.com.cspconsultoria.sga.contrato.domain.Proposta.class.getName());
+            createCache(cm, br.com.cspconsultoria.sga.contrato.domain.Proposta.class.getName() + ".eventos");
+            createCache(cm, br.com.cspconsultoria.sga.contrato.domain.Proposta.class.getName() + ".negociacoes");
+            createCache(cm, br.com.cspconsultoria.sga.contrato.domain.Evento.class.getName());
+            createCache(cm, br.com.cspconsultoria.sga.contrato.domain.Negociacao.class.getName());
+            createCache(cm, br.com.cspconsultoria.sga.contrato.domain.Negociacao.class.getName() + ".propostas");
             // jhipster-needle-ehcache-add-entry
         };
     }
