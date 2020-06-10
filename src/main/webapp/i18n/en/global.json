@@ -7,6 +7,12 @@
       "jhipster-needle-menu-add-element": "JHipster will add additional menu entries here (do not translate!)",
       "entities": {
         "main": "Entities",
+        "unidadeComercial": "Unidade Comercial",
+        "cliente": "Cliente",
+        "areaCliente": "Area Cliente",
+        "proposta": "Proposta",
+        "evento": "Evento",
+        "negociacao": "Negociacao",
         "jhipster-needle-menu-add-entry": "JHipster will add additional entities here (do not translate!)"
       },
       "account": {

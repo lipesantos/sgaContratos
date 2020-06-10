@@ -1,0 +1,41 @@
+{
+  "name": "Negociacao",
+  "fields": [
+    {
+      "fieldName": "data",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "descricao",
+      "fieldType": "String"
+    }
+  ],
+  "relationships": [
+    {
+      "relationshipType": "many-to-many",
+      "otherEntityName": "proposta",
+      "otherEntityRelationshipName": "negociacoes",
+      "relationshipName": "propostas",
+      "otherEntityField": "id",
+      "ownerSide": true
+    },
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "cliente",
+      "otherEntityRelationshipName": "negociacao",
+      "relationshipName": "cliente",
+      "otherEntityField": "id"
+    }
+  ],
+  "changelogDate": "20200610061336",
+  "entityTableName": "negociacao",
+  "dto": "no",
+  "pagination": "no",
+  "service": "no",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "clientRootFolder": "",
+  "applications": "*"
+}

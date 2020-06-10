@@ -1,0 +1,54 @@
+{
+  "name": "Cliente",
+  "fields": [
+    {
+      "fieldName": "cnpj",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "razaoSocial",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "nomeFantasia",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "postalCode",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "city",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "stateProvince",
+      "fieldType": "String"
+    }
+  ],
+  "relationships": [
+    {
+      "relationshipType": "one-to-many",
+      "otherEntityName": "areaCliente",
+      "otherEntityRelationshipName": "cliente",
+      "relationshipName": "areaCliente"
+    },
+    {
+      "relationshipType": "one-to-many",
+      "otherEntityName": "negociacao",
+      "otherEntityRelationshipName": "cliente",
+      "relationshipName": "negociacao"
+    }
+  ],
+  "changelogDate": "20200610060936",
+  "entityTableName": "cliente",
+  "dto": "no",
+  "pagination": "pagination",
+  "service": "no",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "clientRootFolder": "",
+  "applications": "*"
+}

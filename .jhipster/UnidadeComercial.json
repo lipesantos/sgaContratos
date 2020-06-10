@@ -1,0 +1,25 @@
+{
+  "name": "UnidadeComercial",
+  "fields": [
+    {
+      "fieldName": "cnpj",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "razaoSocial",
+      "fieldType": "String"
+    }
+  ],
+  "relationships": [],
+  "changelogDate": "20200610060836",
+  "entityTableName": "unidade_comercial",
+  "dto": "no",
+  "pagination": "no",
+  "service": "no",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "clientRootFolder": "",
+  "applications": "*"
+}

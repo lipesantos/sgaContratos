@@ -1,0 +1,23 @@
+{
+  "sgaContratosApp": {
+    "areaCliente": {
+      "home": {
+        "title": "Area Clientes",
+        "createLabel": "Criar novo Area Cliente",
+        "createOrEditLabel": "Criar ou editar Area Cliente",
+        "notFound": "Nenhum Area Cliente encontrado"
+      },
+      "created": "Um novo Area Cliente foi criado com o identificador {{ param }}",
+      "updated": "Um Area Cliente foi atualizado com o identificador {{ param }}",
+      "deleted": "Um Area Cliente foi excluído com o identificador {{ param }}",
+      "delete": {
+        "question": "Tem certeza de que deseja excluir Area Cliente {{ id }}?"
+      },
+      "detail": {
+        "title": "Area Cliente"
+      },
+      "nome": "Nome",
+      "cliente": "Cliente"
+    }
+  }
+}

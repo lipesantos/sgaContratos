@@ -1,0 +1,41 @@
+{
+  "name": "Evento",
+  "fields": [
+    {
+      "fieldName": "dataEmissao",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "dataVencimento",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "descricao",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "valor",
+      "fieldType": "String"
+    }
+  ],
+  "relationships": [
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "proposta",
+      "otherEntityRelationshipName": "evento",
+      "relationshipName": "proposta",
+      "otherEntityField": "id"
+    }
+  ],
+  "changelogDate": "20200610061236",
+  "entityTableName": "evento",
+  "dto": "no",
+  "pagination": "pagination",
+  "service": "no",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "clientRootFolder": "",
+  "applications": "*"
+}

@@ -1,0 +1,82 @@
+{
+  "name": "Proposta",
+  "fields": [
+    {
+      "fieldName": "tipo",
+      "fieldType": "TipoProposta",
+      "fieldValues": "PROJETO,ALOCACAO"
+    },
+    {
+      "fieldName": "dataInicio",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "dataFim",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "referencia",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "descricaoContrato",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "descricaoProposta",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "valorInicial",
+      "fieldType": "BigDecimal"
+    }
+  ],
+  "relationships": [
+    {
+      "relationshipType": "one-to-many",
+      "otherEntityName": "evento",
+      "otherEntityRelationshipName": "proposta",
+      "relationshipName": "evento"
+    },
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "cliente",
+      "otherEntityRelationshipName": "proposta",
+      "relationshipName": "cliente",
+      "otherEntityField": "id"
+    },
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "unidadeComercial",
+      "otherEntityRelationshipName": "proposta",
+      "relationshipName": "unidadeComercial",
+      "otherEntityField": "id"
+    },
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "areaCliente",
+      "otherEntityRelationshipName": "proposta",
+      "relationshipName": "areaCliente",
+      "otherEntityField": "id"
+    },
+    {
+      "relationshipType": "many-to-many",
+      "otherEntityName": "negociacao",
+      "otherEntityRelationshipName": "propostas",
+      "relationshipName": "negociacoes",
+      "otherEntityField": "id",
+      "ownerSide": false
+    }
+  ],
+  "changelogDate": "20200610061136",
+  "entityTableName": "proposta",
+  "dto": "no",
+  "pagination": "pagination",
+  "service": "no",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "clientRootFolder": "",
+  "applications": "*"
+}

@@ -1,0 +1,25 @@
+{
+  "sgaContratosApp": {
+    "negociacao": {
+      "home": {
+        "title": "Negociacaos",
+        "createLabel": "Criar novo Negociacao",
+        "createOrEditLabel": "Criar ou editar Negociacao",
+        "notFound": "Nenhum Negociacao encontrado"
+      },
+      "created": "Um novo Negociacao foi criado com o identificador {{ param }}",
+      "updated": "Um Negociacao foi atualizado com o identificador {{ param }}",
+      "deleted": "Um Negociacao foi excluído com o identificador {{ param }}",
+      "delete": {
+        "question": "Tem certeza de que deseja excluir Negociacao {{ id }}?"
+      },
+      "detail": {
+        "title": "Negociacao"
+      },
+      "data": "Data",
+      "descricao": "Descricao",
+      "propostas": "Propostas",
+      "cliente": "Cliente"
+    }
+  }
+}
