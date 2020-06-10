@@ -1,0 +1,67 @@
+entity UnidadeComercial {
+	cnpj Long
+    razaoSocial String
+}
+
+entity Cliente {
+	cnpj Long
+    razaoSocial String
+    nomeFantasia String
+	postalCode String
+	city String
+	stateProvince String
+}
+
+entity AreaCliente {
+	nome String required
+}
+
+relationship OneToMany {
+	Cliente to AreaCliente{cliente}
+}
+
+enum TipoProposta {
+    PROJETO, ALOCACAO
+}
+
+entity Proposta {
+	tipo TipoProposta
+	dataInicio Instant
+    dataFim Instant
+    referencia String
+	descricaoContrato String
+    descricaoProposta String
+	valorInicial BigDecimal
+}
+
+relationship OneToMany {
+    UnidadeComercial to Proposta{unidadeComercial}
+    Cliente to Proposta{cliente}
+    AreaCliente to Proposta{areaCliente}
+}
+
+entity Evento {
+	proposta Proposta
+	dataEmissao Instant
+    dataVencimento Instant
+    descricao String
+	valor String
+}
+
+entity Negociacao {
+	cliente Cliente
+	data Instant
+    descricao String
+}
+
+relationship ManyToMany {
+	Proposta{negociacoes} to Negociacao{propostas}
+}
+
+relationship OneToMany {
+	 Proposta to Evento{proposta}
+     Cliente to Negociacao{cliente}
+}
+
+// Set pagination options
+paginate Cliente, Proposta, Evento with pagination
